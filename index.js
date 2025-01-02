@@ -107,6 +107,8 @@ function validateFormControl(formControl) {
       ) {
         isFormValid = false;
         isFormControlValid = false;
+        label.classList.add("invalid");
+        input.classList.add("invalid");
         errorContainer.textContent = getErrorMessage(input, label);
       }
     }
@@ -115,6 +117,8 @@ function validateFormControl(formControl) {
   if (isFormControlValid) {
     isFormValid = true;
     errorContainer.textContent = "";
+    label.classList.remove("invalid");
+    input.classList.remove("invalid");
   }
 }
 validateForm();

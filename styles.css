@@ -28,23 +28,17 @@ form {
   .error {
     color: red;
   }
-
+  label.invalid {
+    color: red;
+  }
   input {
     padding: 6px;
     border-radius: 4px;
     border: 1px solid rgba(128, 128, 128, 0.25);
   }
-  input:invalid:not(:placeholder-shown) {
+  input.invalid {
     border-color: red;
     background-color: rgba(255, 0, 0, 0.25);
-  }
-
-  label:has(+ input:invalid:not(:placeholder-shown)) {
-    color: red;
-  }
-
-  input:valid + p.error {
-    display: none;
   }
 }
 
